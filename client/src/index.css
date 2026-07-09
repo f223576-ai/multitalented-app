@@ -1,0 +1,66 @@
+:root {
+  --color-darkest: #481E28;
+  --color-dark: #733040;
+  --color-primary: #BD6077;
+  --color-medium: #CF8B9C;
+  --color-light: #E1B6C1;
+  --color-lightest: #F3E1E6;
+  --color-accent: #752300;
+  --color-gold: #B79C2E;
+  --color-pink-highlight: #FC9AF1;
+
+  --font-main: 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-lightest);
+  color: var(--color-darkest);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
+
+input {
+  font-family: var(--font-main);
+}
+/* Responsive Layout */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(72, 30, 40, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+  }
+
+  .sidebar {
+    position: fixed !important;
+    top: 0;
+    left: -260px;
+    z-index: 30;
+    transition: left 0.25s ease;
+    height: 100vh !important;
+  }
+
+  .sidebar.open {
+    left: 0 !important;
+  }
+}
